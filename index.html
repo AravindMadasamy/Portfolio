@@ -75,15 +75,18 @@
     </div>
   </section>
   
-  <section id="contact" class="contact-me">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Email" required/>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+ <section id="contact" class="contact-me">
+  <h2>Contact Me</h2>
+  <form id="contactForm" class="contact-form">
+    <div class="form-group">
+      <input type="text" placeholder="Your Name" name="name" required />
+      <input type="email" placeholder="Your Email" name="email" required />
+    </div>
+    <textarea placeholder="Your Message" name="message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
   <footer>
     <div class="social-follow">
       <p>Follow me on</p>
