@@ -266,7 +266,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .form-group {
     flex-direction: column;
   }
