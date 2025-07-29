@@ -1,0 +1,260 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background:#e3f2fd;
+    color: #333;
+    margin: 0;
+  }
+  header .hero {
+    background: linear-gradient(135deg, #7111cb 0%, #2575fc 100%);
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  #typingText{
+    display: inline-block;
+    min-width: 250px;
+    white-space: nowrap;
+  }
+  
+  /*nav link*/
+  .nav-links a{
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #00e5ff;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  /* Stylish About Me Section */
+.about-section {
+  padding: 3rem 2rem;
+  background-color: #e3f2fd; /* Soft Sky */
+  color: #333;
+  text-align: center;
+}
+
+
+.about-card {
+  background: white;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+}
+
+.about-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.about-skills {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about-skills li {
+  background-color: #1bb883;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.about-skills li:hover {
+  background-color: #b81b4a;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+ 
+ /*project section*/
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .project-card {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .project-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #0077ff;
+  }
+
+  /*contact section */
+   .contact-me{
+    background: #e3f2fd;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  button {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+  }
+
+
+/* Project Showcase */
+.project-showcase {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #e3f2fd;
+}
+
+.project-showcase h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.project-box {
+  width: 250px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+}
+
+.project-box a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: white;
+  background-color: rgba(0,0,0,0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-box a:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Gradient Themes */
+.neon-pulse {
+  background: linear-gradient(135deg, #00ffe7, #3a0ca3);
+}
+.sunrise-dream {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+.galaxy-glow {
+  background: linear-gradient(to right, #20002c, #cbb4d4);
+}
+.coral-pop {
+  background-color: #ff6b6b;
+}
+.forest-mist {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+
+
+/*SOCIAL MEDIA ICON*/
+.social-follow {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #e3f2fd;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.social-follow p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 28px;
+  color: #444;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.3);
+  color: #0077ff;
+}
+/*Scroll button*/
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.2);
+}
