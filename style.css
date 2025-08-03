@@ -1,7 +1,6 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background:#e3f2fd;
-     
     color: #333;
     margin: 0;
   }
@@ -41,6 +40,135 @@ body {
   .nav-links a:hover::after {
     width: 100%;
   }
+/* /* Desktop Resume Button */
+.desktop-only {
+  display: inline-block;
+}
+
+/* Hide desktop resume button in mobile */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  gap: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1200;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* X animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Slide Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 65%;
+  max-width: 280px;
+  height: 100%;
+  background: rgba(10, 10, 40, 0.95);
+  backdrop-filter: blur(12px);
+  list-style: none;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: 0.4s ease-in-out;
+  z-index: 1100;
+  box-shadow: -2px 0 20px rgba(0,0,0,0.4);
+  border-radius: 20px 0 0 20px;
+}
+
+.mobile-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.mobile-menu li a:hover {
+  color: black;
+  transform: scale(1.08);
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+/* Mobile Resume Button */
+.mobile-only.resume-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00ffe7, #3a0ca3);
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.mobile-only.resume-btn:hover {
+  background: linear-gradient(135deg, #3a0ca3, #00ffe7);
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+
+/* Staggered Fade-in Animation */
+.mobile-menu li {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.4s ease;
+}
+
+.mobile-menu.active li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mobile-menu.active li:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu.active li:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu.active li:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu.active li:nth-child(4) { transition-delay: 0.4s; }
+
+/* Mobile view only shows hamburger */
+@media (max-width: 768px) {
+  .nav-links a {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
   /* Stylish About Me Section */
 .about-section {
   padding: 3rem 2rem;
@@ -266,7 +394,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .form-group {
     flex-direction: column;
   }
@@ -323,3 +451,23 @@ body {
 #scrollTopBtn:hover {
   transform: scale(1.2);
 }
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  margin: 16px 0;
+  padding: 10px 24px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.resume-btn:hover {
+  background: #ff9800;
+  color: #222;
+}
+
+
